@@ -38,6 +38,18 @@ get '/posts/:id' do
 	erb :"posts/show"
 end
 
+get '/posts/:id/edit' do
+	@post = Post.find(params[:id])
+	@title = "Edit form"
+	erb :"posts/edit"
+end
+
+put '/posts/:id' do
+	@post = Post.find(params[:id])
+	@post.update(params[:post])
+	redirect "posts/#{@post.id}"
+end
+
 helpers do
 	def title
 		if @title
