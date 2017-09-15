@@ -1,5 +1,8 @@
+require 'sinatra'
+require 'sinatra/activerecord'
+
 configure :development do
-	set :database, 'sqlite3:///dev.db'
+	set :database, 'sqlite3:dev.sqlite3'
 	set :show_exception, true
 end
 
