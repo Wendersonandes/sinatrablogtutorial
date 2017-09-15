@@ -2,3 +2,6 @@
 *.swp
 *.swo
 
+#Ignore sqlite3 files
+*.sqlite3
+
